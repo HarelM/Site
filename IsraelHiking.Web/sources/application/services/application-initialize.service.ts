@@ -25,12 +25,18 @@ export class ApplicationInitializeService {
     public async initialize() {
         try {
             await this.loggingService.initialize();
+            alert("logging init end");
             await this.loggingService.info("Starting IHM Application Initialization");
             this.screenService.initialize();
+            alert("screen service init end");
             await this.databaseService.initialize();
+            alert("database init end");
             this.applicationExitService.initialize();
+            alert("exit service init end");
             this.openWithService.initialize();
+            alert("open with init end");
             this.purchaseService.initialize();
+            alert("purchase service init end");
             if (this.runnincContextService.isMobile
                 && !this.runnincContextService.isCordova
                 && !this.runnincContextService.isIFrame) {

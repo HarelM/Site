@@ -1,4 +1,4 @@
-// 3rd party
+﻿// 3rd party
 import { NgModule, APP_INITIALIZER, Injector, ErrorHandler } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { BrowserModule } from "@angular/platform-browser";
@@ -171,6 +171,7 @@ import { routes } from "./routes";
 
 export function initializeApplication(injector: Injector) {
     return async () => {
+        alert("תודה מירי על הנכונות לבדוק! כעת יוצגו מספר תיבות אישור, אנא דווחי לנו מי האחרונה שהופיעה.");
         await injector.get<ApplicationInitializeService>(ApplicationInitializeService).initialize();
     };
 }
